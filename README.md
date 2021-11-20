@@ -58,8 +58,8 @@ MyComponent.propTypes = {
 [img-codecov]: https://img.shields.io/codecov/c/github/ivangabriele/better-prop-types/alpha?style=flat-square
 [img-github]: https://img.shields.io/github/workflow/status/ivangabriele/better-prop-types/Check/alpha?style=flat-square
 [img-license]: https://img.shields.io/github/license/ivangabriele/better-prop-types?style=flat-square
-[img-npm]: https://img.shields.io/npm/v/@ivangabriele/better-prop-types?style=flat-square
+[img-npm]: https://img.shields.io/npm/v/better-prop-types?style=flat-square
 [lnk-codecov]: https://codecov.io/gh/ivangabriele/better-prop-types/branch/alpha
 [lnk-github]: https://github.com/ivangabriele/better-prop-types/actions?query=branch%3Aalpha++
 [lnk-license]: https://github.com/ivangabriele/better-prop-types/blob/alpha/LICENSE
-[lnk-npm]: https://www.npmjs.com/package/@ivangabriele/better-prop-types
+[lnk-npm]: https://www.npmjs.com/package/better-prop-types
