@@ -24,7 +24,7 @@
     "@ivangabriele/commitlint-config": "1.0.2",
     "@ivangabriele/eslint-config-typescript-base": "2.1.1",
     "@ivangabriele/prettier-config": "2.0.2",
-    "@ivangabriele/semantic-release-config-base": "1.0.4",
+    "@ivangabriele/semantic-release-config-base": "1.1.0",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-node-resolve": "13.0.6",
     "@rollup/plugin-typescript": "8.3.0",
