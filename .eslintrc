@@ -1,0 +1,54 @@
+{
+  "extends": "@ivangabriele/eslint-config-typescript-base",
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": ["/dist/"],
+  "rules": {
+    "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }]
+  },
+  "overrides": [
+    {
+      "files": [
+        "common/**/*.ts",
+        "components/**/*.tsx",
+        "contents/**/*.tsx",
+        "elements/**/*.tsx",
+        "fields/**/*.tsx",
+        "GlobalStyle.tsx",
+        "ThemeProvider.tsx"
+      ],
+      "rules": {
+        "import/no-default-export": "error",
+        "import/prefer-default-export": "off"
+      }
+    },
+    {
+      "files": ["icons/**/*.tsx"],
+      "rules": {
+        "react/jsx-sort-props": "off"
+      }
+    },
+    {
+      "files": ["**/*.stories.tsx"],
+      "rules": {
+        "sort-keys-fix/sort-keys-fix": "off"
+      }
+    },
+    {
+      "files": ["./scripts/**/*.js", "./scripts/**/*.mjs"],
+      "env": {
+        "browser": false,
+        "node": true
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+      }
+    }
+  ]
+}
