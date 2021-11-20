@@ -548,10 +548,10 @@
   dependencies:
     prettier "2.4.1"
 
-"@ivangabriele/semantic-release-config-base@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@ivangabriele/semantic-release-config-base/-/semantic-release-config-base-1.1.1.tgz#b01885e3b658480d7d3a67c3c907d283ff5db5a7"
-  integrity sha512-Lcgc4kA84wnUT1MGLwERR00KPy1s61UKwx6QgHI1nn/cMQbVuGcLtGIrhZUzWW9yGTG68nHPUVFM3ZYt62wfnA==
+"@ivangabriele/semantic-release-config-base@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@ivangabriele/semantic-release-config-base/-/semantic-release-config-base-1.1.3.tgz#452e57045dc06e841da9810287dcf37391332c3e"
+  integrity sha512-951PHbGNihPFdf0qD49cubC+70Y9gMaCSLmKRPbMV0c4+f+obya9Ui13nGECiwj9jBy0JLhkhmHrtXZwCM0iSQ==
   dependencies:
     "@semantic-release/changelog" "6.0.1"
     "@semantic-release/commit-analyzer" "9.0.1"
