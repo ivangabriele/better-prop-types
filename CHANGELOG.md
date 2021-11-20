@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-11-20)
+
+
+### Features
+
+* attach new modifiers to element & elementType validators ([c97aefd](https://github.com/ivangabriele/better-prop-types/commit/c97aefda6a32a8d10e1b5bcb78931cd741a5af0d))
+
 # [1.0.0-alpha.3](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-11-20)
 
 
