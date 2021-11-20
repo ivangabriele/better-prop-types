@@ -25,9 +25,9 @@ const any: Requireable<any> = Object.assign(PropTypes.any)
 
 const arrayOf: <T>(type: Validator<T>) => Requireable<T[]> = Object.assign(PropTypes.arrayOf)
 
-const element: Requireable<ReactElementLike> = Object.assign(PropTypes.element)
+const element: Isable<ReactElementLike> = createBetterChainableTypeChecker(PropTypes.element)
 
-const elementType: Requireable<ReactComponentLike> = Object.assign(PropTypes.elementType)
+const elementType: Isable<ReactComponentLike> = createBetterChainableTypeChecker(PropTypes.elementType)
 
 type InstanceOf = <T>(expectedClass: new (...args: any[]) => T) => Requireable<T>
 const instanceOf: InstanceOf = Object.assign(PropTypes.instanceOf)
