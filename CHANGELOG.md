@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-11-20)
+
+
+### Features
+
+* attach new modifiers to oneOf() validator ([e4f9233](https://github.com/ivangabriele/better-prop-types/commit/e4f92339fab2f5b812103c326cb394427f2654c4))
+
 # [1.0.0-alpha.2](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-11-20)
 
 
