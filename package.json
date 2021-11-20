@@ -42,9 +42,9 @@
     "url": "https://www.ivangabriele.com"
   },
   "bugs": {
-    "url": "https://github.com/singularity-ui/core/issues"
+    "url": "https://github.com/ivangabriele/better-prop-types/issues"
   },
-  "homepage": "https://singularity-ui.github.io/core/",
+  "homepage": "https://github.com/ivangabriele/better-prop-types#readme",
   "prettier": "@ivangabriele/prettier-config",
   "publishConfig": {
     "access": "public"
@@ -54,6 +54,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/singularity-ui/core.git"
+    "url": "git+https://github.com/ivangabriele/better-prop-types.git"
   }
 }
