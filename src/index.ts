@@ -37,8 +37,8 @@ const node: Requireable<ReactNodeLike> = Object.assign(PropTypes.node)
 type ObjectOf = <T>(type: Validator<T>) => Requireable<{ [K in keyof any]: T }>
 const objectOf: ObjectOf = Object.assign(PropTypes.objectOf)
 
-type OneOf = <T>(types: ReadonlyArray<T>) => Requireable<T>
-const oneOf: OneOf = Object.assign(PropTypes.oneOf)
+type OneOf = <T>(types: ReadonlyArray<T>) => Isable<T>
+const oneOf: OneOf = types => createBetterChainableTypeChecker(PropTypes.oneOf(types))
 
 type OneOfType = <T extends Validator<any>>(types: T[]) => Requireable<NonNullable<InferType<T>>>
 const oneOfType: OneOfType = Object.assign(PropTypes.oneOfType)

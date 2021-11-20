@@ -2,8 +2,6 @@ import BetterPropTypes from '../src'
 import expectPropToFailWithError from './helpers/expectPropToFailWithError'
 import expectPropToPass from './helpers/expectPropToPass'
 
-const INVALID_VALUE = 42n ** 42n
-
 const METHODS = [
   {
     name: 'array',
@@ -44,6 +42,8 @@ const METHODS = [
 
 METHODS.forEach(({ name, type, validValue }) => {
   describe(name, () => {
+    const INVALID_VALUE = 42n ** 42n
+
     describe('.isNotNull', () => {
       test('should pass with a valid value', () => {
         expectPropToPass(BetterPropTypes[name].isNotNull, validValue)
