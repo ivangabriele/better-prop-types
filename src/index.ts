@@ -23,7 +23,8 @@ const symbol: Isable<symbol> = createBetterChainableTypeChecker(PropTypes.symbol
 
 const any: Requireable<any> = Object.assign(PropTypes.any)
 
-const arrayOf: <T>(type: Validator<T>) => Requireable<T[]> = Object.assign(PropTypes.arrayOf)
+type ArrayOf = <T>(type: Validator<T>) => Isable<T[]>
+const arrayOf: ArrayOf = type => createBetterChainableTypeChecker(PropTypes.arrayOf(type))
 
 const element: Isable<ReactElementLike> = createBetterChainableTypeChecker(PropTypes.element)
 
@@ -34,8 +35,8 @@ const instanceOf: InstanceOf = Object.assign(PropTypes.instanceOf)
 
 const node: Requireable<ReactNodeLike> = Object.assign(PropTypes.node)
 
-type ObjectOf = <T>(type: Validator<T>) => Requireable<{ [K in keyof any]: T }>
-const objectOf: ObjectOf = Object.assign(PropTypes.objectOf)
+type ObjectOf = <T>(type: Validator<T>) => Isable<{ [K in keyof any]: T }>
+const objectOf: ObjectOf = type => createBetterChainableTypeChecker(PropTypes.objectOf(type))
 
 type OneOf = <T>(types: ReadonlyArray<T>) => Isable<T>
 const oneOf: OneOf = types => createBetterChainableTypeChecker(PropTypes.oneOf(types))

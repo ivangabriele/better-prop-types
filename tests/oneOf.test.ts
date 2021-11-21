@@ -7,6 +7,27 @@ describe('oneOf', () => {
   const VALID_VALUES = ['A string', 42]
   const VALID_VALUE = 'A string'
 
+  test('should pass with a valid value', () => {
+    expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES), VALID_VALUE)
+  })
+
+  test('should fail with an invalid value', () => {
+    expectPropToFailWithError(
+      BetterPropTypes.oneOf(VALID_VALUES),
+      INVALID_VALUE,
+      'Invalid prop `testProp` of value `An invalid string` supplied to `TestComponent`, ' +
+        'expected one of ["A string",42].',
+    )
+  })
+
+  test('should fail with a null value', () => {
+    expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES), null)
+  })
+
+  test('should pass with an undefined value', () => {
+    expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES), undefined)
+  })
+
   describe('.isNotNull', () => {
     test('should pass with a valid value', () => {
       expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES).isNotNull, VALID_VALUE)
@@ -21,16 +42,16 @@ describe('oneOf', () => {
       )
     })
 
-    test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES).isNotNull, undefined)
-    })
-
     test('should fail with a null value', () => {
       expectPropToFailWithError(
         BetterPropTypes.oneOf(VALID_VALUES).isNotNull,
         null,
         'The prop `testProp` is marked as NOT null in `TestComponent`, but its value is `null`.',
       )
+    })
+
+    test('should pass with an undefined value', () => {
+      expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES).isNotNull, undefined)
     })
   })
 
@@ -48,16 +69,16 @@ describe('oneOf', () => {
       )
     })
 
-    test('should fail with a null value', () => {
+    test('should pass with a null value', () => {
+      expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES).isNullable, null)
+    })
+
+    test('should fail with an undefined value', () => {
       expectPropToFailWithError(
         BetterPropTypes.oneOf(VALID_VALUES).isNullable,
         undefined,
         'The prop `testProp` is marked as nullable in `TestComponent`, but its value is `undefined`.',
       )
-    })
-
-    test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.oneOf(VALID_VALUES).isNullable, null)
     })
   })
 

@@ -8,6 +8,26 @@ describe('elementType', () => {
   const INVALID_VALUE = 42n ** 42n
   const VALID_VALUE = () => React.createElement('div')
 
+  test('should pass with a valid value', () => {
+    expectPropToPass(BetterPropTypes.elementType, VALID_VALUE)
+  })
+
+  test('should fail with an invalid value', () => {
+    expectPropToFailWithError(
+      BetterPropTypes.elementType,
+      INVALID_VALUE,
+      'Invalid prop `testProp` of type `bigint` supplied to `TestComponent`, expected a single ReactElement type.',
+    )
+  })
+
+  test('should fail with a null value', () => {
+    expectPropToPass(BetterPropTypes.elementType, null)
+  })
+
+  test('should pass with an undefined value', () => {
+    expectPropToPass(BetterPropTypes.elementType, undefined)
+  })
+
   describe('.isNotNull', () => {
     test('should pass with a valid value', () => {
       expectPropToPass(BetterPropTypes.elementType.isNotNull, VALID_VALUE)
@@ -21,16 +41,16 @@ describe('elementType', () => {
       )
     })
 
-    test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.elementType.isNotNull, undefined)
-    })
-
     test('should fail with a null value', () => {
       expectPropToFailWithError(
         BetterPropTypes.elementType.isNotNull,
         null,
         'The prop `testProp` is marked as NOT null in `TestComponent`, but its value is `null`.',
       )
+    })
+
+    test('should pass with an undefined value', () => {
+      expectPropToPass(BetterPropTypes.elementType.isNotNull, undefined)
     })
   })
 
@@ -47,16 +67,16 @@ describe('elementType', () => {
       )
     })
 
-    test('should fail with a null value', () => {
+    test('should pass with a null value', () => {
+      expectPropToPass(BetterPropTypes.elementType.isNullable, null)
+    })
+
+    test('should fail with an undefined value', () => {
       expectPropToFailWithError(
         BetterPropTypes.elementType.isNullable,
         undefined,
         'The prop `testProp` is marked as nullable in `TestComponent`, but its value is `undefined`.',
       )
-    })
-
-    test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.elementType.isNullable, null)
     })
   })
 
