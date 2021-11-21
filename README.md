@@ -7,7 +7,7 @@
 
 ## Features
 
-- Add `.isNotNull` and `.isNullable` modifiers to primitive validators, besides the original `.isRequired` prop:
+- Add `.isNotNull` and `.isNullable` modifiers to all validators, besides the original `.isRequired` prop:
   - `.isNotNull` keeps the prop optional but rejects `null` (= accepts `undefined` but not `null` values)
   - `.isNullable` marks the prop as required but accepts `null` (= accepts `null` but not `undefined` values)
 
@@ -16,13 +16,13 @@
 ## Installation
 
 ```sh
-npm i -E better-prop-types@alpha
+yarn add -E better-prop-types@alpha
 ```
 
 or:
 
 ```sh
-yarn add -E better-prop-types@alpha
+npm i -E better-prop-types@alpha
 ```
 
 ## Example
@@ -45,9 +45,10 @@ MyComponent.propTypes = {
 }
 ```
 
+You can also use them with all the functional validators: `objectOf(/* */).isNullable`, `shape(/* */).isNotNull`, etc.
+
 ## Roadmap
 
-- Add `.isNotNull` and `.isNullable` modifiers to ALL validators
 - Integrate some [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra) extra types:
   - `all(...validators)` => `BetterPropsTypes.all(...validators)`
   - `deprecated(validator, reason)` => `BetterPropsTypes.string.isDeprecated(reason)`

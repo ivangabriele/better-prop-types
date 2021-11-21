@@ -5,7 +5,6 @@ import PropTypes, {
   ReactComponentLike,
   ReactElementLike,
   ReactNodeLike,
-  Requireable,
   ValidationMap,
   Validator,
 } from 'prop-types'
@@ -48,8 +47,8 @@ const objectOf: ObjectOfValidator = type => createBetterChainableTypeChecker(Pro
 export type OneOfValidator = <T>(types: ReadonlyArray<T>) => Isable<T>
 const oneOf: OneOfValidator = types => createBetterChainableTypeChecker(PropTypes.oneOf(types))
 
-export type OneOfTypeValidator = <T extends Validator<any>>(types: T[]) => Requireable<NonNullable<InferType<T>>>
-const oneOfType: OneOfTypeValidator = Object.assign(PropTypes.oneOfType)
+export type OneOfTypeValidator = <T extends Validator<any>>(types: T[]) => Isable<NonNullable<InferType<T>>>
+const oneOfType: OneOfTypeValidator = type => createBetterChainableTypeChecker(PropTypes.oneOfType(type))
 
 export type ShapeValidator = <P extends ValidationMap<any>>(type: P) => Isable<InferProps<P>>
 const shape: ShapeValidator = type => createBetterChainableTypeChecker(PropTypes.shape(type))
