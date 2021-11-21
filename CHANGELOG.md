@@ -1,3 +1,10 @@
+# [1.0.0-alpha.5](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-11-21)
+
+
+### Bug Fixes
+
+* add missing main field in package ([5657736](https://github.com/ivangabriele/better-prop-types/commit/5657736c40590853612f007910a284ccbd0bad5f))
+
 # [1.0.0-alpha.4](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-11-20)
 
 
