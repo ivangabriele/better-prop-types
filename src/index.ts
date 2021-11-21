@@ -21,7 +21,7 @@ const object: Isable<object> = createBetterChainableTypeChecker(PropTypes.object
 const string: Isable<string> = createBetterChainableTypeChecker(PropTypes.string)
 const symbol: Isable<symbol> = createBetterChainableTypeChecker(PropTypes.symbol)
 
-const any: Requireable<any> = Object.assign(PropTypes.any)
+const any: Isable<any> = createBetterChainableTypeChecker(PropTypes.any)
 
 type ArrayOf = <T>(type: Validator<T>) => Isable<T[]>
 const arrayOf: ArrayOf = type => createBetterChainableTypeChecker(PropTypes.arrayOf(type))
