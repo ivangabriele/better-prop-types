@@ -4,7 +4,7 @@ import BetterPropTypes from '../src'
 import expectPropToFailWithError from './helpers/expectPropToFailWithError'
 import expectPropToPass from './helpers/expectPropToPass'
 
-describe('node', () => {
+describe('.node', () => {
   const INVALID_VALUE = 42n ** 42n
   const VALID_VALUE = React.createElement('div')
 

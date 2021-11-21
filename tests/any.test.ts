@@ -2,7 +2,7 @@ import BetterPropTypes from '../src'
 import expectPropToFailWithError from './helpers/expectPropToFailWithError'
 import expectPropToPass from './helpers/expectPropToPass'
 
-describe('any', () => {
+describe('.any', () => {
   const VALID_VALUE = 'anything'
 
   test('should pass with a valid value', () => {

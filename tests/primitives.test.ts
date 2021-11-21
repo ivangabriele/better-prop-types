@@ -41,7 +41,7 @@ const METHODS = [
 ]
 
 METHODS.forEach(({ name, type, validValue }) => {
-  describe(name, () => {
+  describe(`.${name}`, () => {
     const INVALID_VALUE = 42n ** 42n
 
     test('should pass with a valid value', () => {

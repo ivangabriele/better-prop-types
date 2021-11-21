@@ -2,7 +2,7 @@ import BetterPropTypes from '../src'
 import expectPropToFailWithError from './helpers/expectPropToFailWithError'
 import expectPropToPass from './helpers/expectPropToPass'
 
-describe('arrayOf', () => {
+describe('.arrayOf()', () => {
   const OF_TYPE = BetterPropTypes.string
 
   const INVALID_VALUE = [42n ** 42n]

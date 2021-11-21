@@ -13,6 +13,9 @@ import PropTypes, {
 import createBetterChainableTypeChecker from './helpers/createChainableTypeChecker'
 import { Isable } from './types'
 
+// —————————————————————————————————————————————————————————————————————————————
+// Primitive validators
+
 const array: Isable<any[]> = createBetterChainableTypeChecker(PropTypes.array)
 const bool: Isable<boolean> = createBetterChainableTypeChecker(PropTypes.bool)
 const func: Isable<(...args: any[]) => any> = createBetterChainableTypeChecker(PropTypes.func)
@@ -21,34 +24,41 @@ const object: Isable<object> = createBetterChainableTypeChecker(PropTypes.object
 const string: Isable<string> = createBetterChainableTypeChecker(PropTypes.string)
 const symbol: Isable<symbol> = createBetterChainableTypeChecker(PropTypes.symbol)
 
+// —————————————————————————————————————————————————————————————————————————————
+// Functional validators
+
 const any: Isable<any> = createBetterChainableTypeChecker(PropTypes.any)
 
-type ArrayOf = <T>(type: Validator<T>) => Isable<T[]>
-const arrayOf: ArrayOf = type => createBetterChainableTypeChecker(PropTypes.arrayOf(type))
+export type ArrayOfValidator = <T>(type: Validator<T>) => Isable<T[]>
+const arrayOf: ArrayOfValidator = type => createBetterChainableTypeChecker(PropTypes.arrayOf(type))
 
 const element: Isable<ReactElementLike> = createBetterChainableTypeChecker(PropTypes.element)
 
 const elementType: Isable<ReactComponentLike> = createBetterChainableTypeChecker(PropTypes.elementType)
 
-type InstanceOf = <T>(expectedClass: new (...args: any[]) => T) => Isable<T>
-const instanceOf: InstanceOf = expectedClass => createBetterChainableTypeChecker(PropTypes.instanceOf(expectedClass))
+export type InstanceOfValidator = <T>(expectedClass: new (...args: any[]) => T) => Isable<T>
+const instanceOf: InstanceOfValidator = expectedClass =>
+  createBetterChainableTypeChecker(PropTypes.instanceOf(expectedClass))
 
 const node: Isable<ReactNodeLike> = createBetterChainableTypeChecker(PropTypes.node)
 
-type ObjectOf = <T>(type: Validator<T>) => Isable<{ [K in keyof any]: T }>
-const objectOf: ObjectOf = type => createBetterChainableTypeChecker(PropTypes.objectOf(type))
+export type ObjectOfValidator = <T>(type: Validator<T>) => Isable<{ [K in keyof any]: T }>
+const objectOf: ObjectOfValidator = type => createBetterChainableTypeChecker(PropTypes.objectOf(type))
 
-type OneOf = <T>(types: ReadonlyArray<T>) => Isable<T>
-const oneOf: OneOf = types => createBetterChainableTypeChecker(PropTypes.oneOf(types))
+export type OneOfValidator = <T>(types: ReadonlyArray<T>) => Isable<T>
+const oneOf: OneOfValidator = types => createBetterChainableTypeChecker(PropTypes.oneOf(types))
 
-type OneOfType = <T extends Validator<any>>(types: T[]) => Requireable<NonNullable<InferType<T>>>
-const oneOfType: OneOfType = Object.assign(PropTypes.oneOfType)
+export type OneOfTypeValidator = <T extends Validator<any>>(types: T[]) => Requireable<NonNullable<InferType<T>>>
+const oneOfType: OneOfTypeValidator = Object.assign(PropTypes.oneOfType)
 
-type Shape = <P extends ValidationMap<any>>(type: P) => Requireable<InferProps<P>>
-const shape: Shape = Object.assign(PropTypes.shape)
+export type ShapeValidator = <P extends ValidationMap<any>>(type: P) => Isable<InferProps<P>>
+const shape: ShapeValidator = type => createBetterChainableTypeChecker(PropTypes.shape(type))
 
-type Exact = <P extends ValidationMap<any>>(type: P) => Requireable<Required<InferProps<P>>>
-const exact: Exact = Object.assign(PropTypes.exact)
+export type ExactValidator = <P extends ValidationMap<any>>(type: P) => Isable<Required<InferProps<P>>>
+const exact: ExactValidator = type => createBetterChainableTypeChecker(PropTypes.exact(type))
+
+// —————————————————————————————————————————————————————————————————————————————
+// Named default export
 
 const BetterPropTypes = {
   any,
