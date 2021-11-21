@@ -30,8 +30,8 @@ const element: Isable<ReactElementLike> = createBetterChainableTypeChecker(PropT
 
 const elementType: Isable<ReactComponentLike> = createBetterChainableTypeChecker(PropTypes.elementType)
 
-type InstanceOf = <T>(expectedClass: new (...args: any[]) => T) => Requireable<T>
-const instanceOf: InstanceOf = Object.assign(PropTypes.instanceOf)
+type InstanceOf = <T>(expectedClass: new (...args: any[]) => T) => Isable<T>
+const instanceOf: InstanceOf = expectedClass => createBetterChainableTypeChecker(PropTypes.instanceOf(expectedClass))
 
 const node: Isable<ReactNodeLike> = createBetterChainableTypeChecker(PropTypes.node)
 
