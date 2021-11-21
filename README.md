@@ -51,7 +51,7 @@ You can also use them with all the functional validators: `objectOf(/* */).isNul
 
 - Integrate some [prop-types-extra](https://github.com/react-bootstrap/prop-types-extra) extra types:
   - `all(...validators)` => `BetterPropsTypes.all(...validators)`
-  - `deprecated(validator, reason)` => `BetterPropsTypes.string.isDeprecated(reason)`
+  - `deprecated(validator, reason)` => `BetterPropsTypes.isDeprecated(validator, reason)`
   - `isRequiredForA11y(validator)` => `BetterPropsTypes.string.isRequiredForA11y`
 
 ---
