@@ -56,7 +56,11 @@ MyComponent.propTypes = {
 }
 ```
 
-You can also use them with all the functional validators: `objectOf(/* */).isRequiredButNullable`, `shape(/* */).isOptionalButNotNull`, etc.
+You can also use them with all the functional validators:
+
+- `objectOf(/* */).isRequiredButNullable`
+- `shape(/* */).isOptionalButNotNull`
+- etc
 
 ## Roadmap
 
