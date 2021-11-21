@@ -3,7 +3,7 @@ import { Requireable, Validator } from 'prop-types'
 
 export interface Isable<T> extends Requireable<T | undefined | null> {
   /** Can be undefined but NOT null. */
-  isNotNull: Validator<T | undefined>
+  isOptionalButNotNull: Validator<T | undefined>
   /** Is required but can be null. */
-  isNullable: Validator<T | null>
+  isRequiredButNullable: Validator<T | null>
 }

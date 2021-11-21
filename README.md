@@ -7,9 +7,10 @@
 
 ## Features
 
-- Add `.isNotNull` and `.isNullable` modifiers to all validators, besides the original `.isRequired` prop:
-  - `.isNotNull` keeps the prop optional but rejects `null` (= accepts `undefined` but not `null` values)
-  - `.isNullable` marks the prop as required but accepts `null` (= accepts `null` but not `undefined` values)
+- Add `.isOptionalButNotNull` and `.isRequiredButNullable` modifiers to all validators, besides the original
+  `.isRequired` one:
+  - `.isOptionalButNotNull` keeps the prop as optional but rejects `null` (= accepts `undefined` but not `null` values)
+  - `.isRequiredButNullable` marks the prop as required but accepts `null` (= accepts `null` but not `undefined` values)
 
 ## Usage
 
@@ -32,20 +33,20 @@ import BetterPropTypes from 'better-prop-types'
 
 export const MyComponent = ({
   anOptionalButNonNullStringProp = 'A default string',
-  aRequiredButNullableNumberProp,
   aRequiredAndNonNullableBooleanProp,
+  aRequiredButNullableNumberProp,
 }) => (
   // ...
 )
 
 MyComponent.propTypes = {
-  anOptionalButNonNullStringProp: BetterPropTypes.string.isNotNull,
-  aRequiredButNullableNumberProp: BetterPropTypes.number.isNullable,
+  anOptionalButNonNullStringProp: BetterPropTypes.string.isOptionalButNotNull,
   aRequiredAndNonNullableBooleanProp: BetterPropTypes.bool.isRequired,
+  aRequiredButNullableNumberProp: BetterPropTypes.number.isRequiredButNullable,
 }
 ```
 
-You can also use them with all the functional validators: `objectOf(/* */).isNullable`, `shape(/* */).isNotNull`, etc.
+You can also use them with all the functional validators: `objectOf(/* */).isRequiredButNullable`, `shape(/* */).isOptionalButNotNull`, etc.
 
 ## Roadmap
 

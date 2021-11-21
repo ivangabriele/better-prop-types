@@ -30,14 +30,14 @@ describe('.shape()', () => {
     expectPropToPass(BetterPropTypes.shape(SHAPE), undefined)
   })
 
-  describe('.isNotNull', () => {
+  describe('.isOptionalButNotNull', () => {
     test('should pass with a valid value', () => {
-      expectPropToPass(BetterPropTypes.shape(SHAPE).isNotNull, VALID_VALUE)
+      expectPropToPass(BetterPropTypes.shape(SHAPE).isOptionalButNotNull, VALID_VALUE)
     })
 
     test('should fail with an invalid value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.shape(SHAPE).isNotNull,
+        BetterPropTypes.shape(SHAPE).isOptionalButNotNull,
         INVALID_VALUE,
         'Invalid prop `testProp.testKey` of type `bigint` supplied to `TestComponent`, expected `string`.',
       )
@@ -45,37 +45,37 @@ describe('.shape()', () => {
 
     test('should fail with a null value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.shape(SHAPE).isNotNull,
+        BetterPropTypes.shape(SHAPE).isOptionalButNotNull,
         null,
         'The prop `testProp` is marked as NOT null in `TestComponent`, but its value is `null`.',
       )
     })
 
     test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.shape(SHAPE).isNotNull, undefined)
+      expectPropToPass(BetterPropTypes.shape(SHAPE).isOptionalButNotNull, undefined)
     })
   })
 
-  describe('.isNullable', () => {
+  describe('.isRequiredButNullable', () => {
     test('should pass with a valid value', () => {
-      expectPropToPass(BetterPropTypes.shape(SHAPE).isNullable, VALID_VALUE)
+      expectPropToPass(BetterPropTypes.shape(SHAPE).isRequiredButNullable, VALID_VALUE)
     })
 
     test('should fail with an invalid value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.shape(SHAPE).isNullable,
+        BetterPropTypes.shape(SHAPE).isRequiredButNullable,
         INVALID_VALUE,
         'Invalid prop `testProp.testKey` of type `bigint` supplied to `TestComponent`, expected `string`.',
       )
     })
 
     test('should pass with a null value', () => {
-      expectPropToPass(BetterPropTypes.shape(SHAPE).isNullable, null)
+      expectPropToPass(BetterPropTypes.shape(SHAPE).isRequiredButNullable, null)
     })
 
     test('should fail with an undefined value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.shape(SHAPE).isNullable,
+        BetterPropTypes.shape(SHAPE).isRequiredButNullable,
         undefined,
         'The prop `testProp` is marked as nullable in `TestComponent`, but its value is `undefined`.',
       )

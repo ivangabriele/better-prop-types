@@ -73,9 +73,9 @@ export default function createBetterChainableTypeChecker<T>(validate: Requireabl
   }
 
   const chainedCheckType: Isable<T> = checkType.bind(null, false)
-  chainedCheckType.isNullable = checkType.bind(null, 'NULLABLE')
+  chainedCheckType.isRequiredButNullable = checkType.bind(null, 'NULLABLE')
   chainedCheckType.isRequired = checkType.bind(null, 'REQUIRED')
-  chainedCheckType.isNotNull = checkType.bind(null, 'UNNULLABLE')
+  chainedCheckType.isOptionalButNotNull = checkType.bind(null, 'UNNULLABLE')
 
   return chainedCheckType
 }

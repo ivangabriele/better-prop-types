@@ -17,36 +17,36 @@ describe('.any', () => {
     expectPropToPass(BetterPropTypes.any, undefined)
   })
 
-  describe('.isNotNull', () => {
+  describe('.isOptionalButNotNull', () => {
     test('should pass with a valid value', () => {
-      expectPropToPass(BetterPropTypes.any.isNotNull, VALID_VALUE)
+      expectPropToPass(BetterPropTypes.any.isOptionalButNotNull, VALID_VALUE)
     })
 
     test('should fail with a null value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.any.isNotNull,
+        BetterPropTypes.any.isOptionalButNotNull,
         null,
         'The prop `testProp` is marked as NOT null in `TestComponent`, but its value is `null`.',
       )
     })
 
     test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.any.isNotNull, undefined)
+      expectPropToPass(BetterPropTypes.any.isOptionalButNotNull, undefined)
     })
   })
 
-  describe('.isNullable', () => {
+  describe('.isRequiredButNullable', () => {
     test('should pass with a valid value', () => {
-      expectPropToPass(BetterPropTypes.any.isNullable, VALID_VALUE)
+      expectPropToPass(BetterPropTypes.any.isRequiredButNullable, VALID_VALUE)
     })
 
     test('should pass with an null value', () => {
-      expectPropToPass(BetterPropTypes.any.isNullable, null)
+      expectPropToPass(BetterPropTypes.any.isRequiredButNullable, null)
     })
 
     test('should fail with a undefined value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.any.isNullable,
+        BetterPropTypes.any.isRequiredButNullable,
         undefined,
         'The prop `testProp` is marked as nullable in `TestComponent`, but its value is `undefined`.',
       )

@@ -50,7 +50,7 @@ METHODS.forEach(({ name, type, validValue }) => {
 
     test('should fail with an invalid value', () => {
       expectPropToFailWithError(
-        BetterPropTypes[name].isNotNull,
+        BetterPropTypes[name].isOptionalButNotNull,
         INVALID_VALUE,
         `Invalid prop \`testProp\` of type \`bigint\` supplied to \`TestComponent\`, expected \`${type}\`.`,
       )
@@ -64,14 +64,14 @@ METHODS.forEach(({ name, type, validValue }) => {
       expectPropToPass(BetterPropTypes[name], undefined)
     })
 
-    describe('.isNotNull', () => {
+    describe('.isOptionalButNotNull', () => {
       test('should pass with a valid value', () => {
         expectPropToPass(BetterPropTypes[name], validValue)
       })
 
       test('should fail with an invalid value', () => {
         expectPropToFailWithError(
-          BetterPropTypes[name].isNotNull,
+          BetterPropTypes[name].isOptionalButNotNull,
           INVALID_VALUE,
           `Invalid prop \`testProp\` of type \`bigint\` supplied to \`TestComponent\`, expected \`${type}\`.`,
         )
@@ -79,37 +79,37 @@ METHODS.forEach(({ name, type, validValue }) => {
 
       test('should fail with a null value', () => {
         expectPropToFailWithError(
-          BetterPropTypes[name].isNotNull,
+          BetterPropTypes[name].isOptionalButNotNull,
           null,
           'The prop `testProp` is marked as NOT null in `TestComponent`, but its value is `null`.',
         )
       })
 
       test('should pass with an undefined value', () => {
-        expectPropToPass(BetterPropTypes[name].isNotNull, undefined)
+        expectPropToPass(BetterPropTypes[name].isOptionalButNotNull, undefined)
       })
     })
 
-    describe('.isNullable', () => {
+    describe('.isRequiredButNullable', () => {
       test('should pass with a valid value', () => {
-        expectPropToPass(BetterPropTypes[name].isNullable, validValue)
+        expectPropToPass(BetterPropTypes[name].isRequiredButNullable, validValue)
       })
 
       test('should fail with an invalid value', () => {
         expectPropToFailWithError(
-          BetterPropTypes[name].isNullable,
+          BetterPropTypes[name].isRequiredButNullable,
           INVALID_VALUE,
           `Invalid prop \`testProp\` of type \`bigint\` supplied to \`TestComponent\`, expected \`${type}\`.`,
         )
       })
 
       test('should pass with a null value', () => {
-        expectPropToPass(BetterPropTypes[name].isNullable, null)
+        expectPropToPass(BetterPropTypes[name].isRequiredButNullable, null)
       })
 
       test('should fail with an undefined value', () => {
         expectPropToFailWithError(
-          BetterPropTypes[name].isNullable,
+          BetterPropTypes[name].isRequiredButNullable,
           undefined,
           'The prop `testProp` is marked as nullable in `TestComponent`, but its value is `undefined`.',
         )

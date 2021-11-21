@@ -28,14 +28,14 @@ describe('.instanceOf()', () => {
     expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS), undefined)
   })
 
-  describe('.isNotNull', () => {
+  describe('.isOptionalButNotNull', () => {
     test('should pass with a valid value', () => {
-      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isNotNull, VALID_VALUE)
+      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isOptionalButNotNull, VALID_VALUE)
     })
 
     test('should fail with an invalid value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.instanceOf(OF_CLASS).isNotNull,
+        BetterPropTypes.instanceOf(OF_CLASS).isOptionalButNotNull,
         INVALID_VALUE,
         'Invalid prop `testProp` of type `BigInt` supplied to `TestComponent`, expected instance of `Map`.',
       )
@@ -43,37 +43,37 @@ describe('.instanceOf()', () => {
 
     test('should fail with a null value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.instanceOf(OF_CLASS).isNotNull,
+        BetterPropTypes.instanceOf(OF_CLASS).isOptionalButNotNull,
         null,
         'The prop `testProp` is marked as NOT null in `TestComponent`, but its value is `null`.',
       )
     })
 
     test('should pass with an undefined value', () => {
-      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isNotNull, undefined)
+      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isOptionalButNotNull, undefined)
     })
   })
 
-  describe('.isNullable', () => {
+  describe('.isRequiredButNullable', () => {
     test('should pass with a valid value', () => {
-      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isNullable, VALID_VALUE)
+      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isRequiredButNullable, VALID_VALUE)
     })
 
     test('should fail with an invalid value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.instanceOf(OF_CLASS).isNullable,
+        BetterPropTypes.instanceOf(OF_CLASS).isRequiredButNullable,
         INVALID_VALUE,
         'Invalid prop `testProp` of type `BigInt` supplied to `TestComponent`, expected instance of `Map`.',
       )
     })
 
     test('should pass with a null value', () => {
-      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isNullable, null)
+      expectPropToPass(BetterPropTypes.instanceOf(OF_CLASS).isRequiredButNullable, null)
     })
 
     test('should fail with an undefined value', () => {
       expectPropToFailWithError(
-        BetterPropTypes.instanceOf(OF_CLASS).isNullable,
+        BetterPropTypes.instanceOf(OF_CLASS).isRequiredButNullable,
         undefined,
         'The prop `testProp` is marked as nullable in `TestComponent`, but its value is `undefined`.',
       )
