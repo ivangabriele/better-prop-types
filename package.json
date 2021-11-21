@@ -11,11 +11,9 @@
     "build": "rm -Rf ./dist && rollup -c",
     "prepare": "husky install",
     "test": "yarn test:lint && yarn test:type && yarn test:unit",
-    "test:build": "jest --maxWorkers=50%",
     "test:lint": "eslint --ext ts .",
     "test:type": "tsc --noEmit",
-    "test:unit": "jest --maxWorkers=50%",
-    "test:watch": "yarn test:unit --watch"
+    "test:unit": "jest"
   },
   "dependencies": {
     "@types/prop-types": "15.7.4",
