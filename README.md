@@ -5,16 +5,26 @@
 [![Code Coverage][img-codecov]][lnk-codecov]
 [![NPM Version][img-npm]][lnk-npm]
 
+**better-prop-types** is a wrapper for the original **[prop-types][lnk-prop-types]** library adding a few more validators and
+modifiers to accurately handle `null` and `undefined` values (which shouldn't be considered similar!).
+
+The code is fully test-covered and actively used in production.
+
+The library includes the original `prop-types` as a dependency.
+
+And that's important to note that **better-prop-types** is only bundled as a full JavaScript module (ESM).
+
 ## Features
 
 - Add `.isOptionalButNotNull` and `.isRequiredButNullable` modifiers to all validators, besides the original
   `.isRequired` one:
-  - `.isOptionalButNotNull` keeps the prop as optional but rejects `null` (= accepts `undefined` but not `null` values)
-  - `.isRequiredButNullable` marks the prop as required but accepts `null` (= accepts `null` but not `undefined` values)
+  - `.isOptionalButNotNull` keeps the prop as **optional** (accepting `undefined`) but rejects `null` values
+  - `.isRequired` marks the prop as **required** but rejects both `null` & `undefined` values
+  - `.isRequiredButNullable` marks the prop as **required** (rejecting `undefined`) but accepts `null` values
 
 ## Usage
 
-## Installation
+### Installation
 
 ```sh
 yarn add -E better-prop-types@alpha
@@ -26,7 +36,7 @@ or:
 npm i -E better-prop-types@alpha
 ```
 
-## Example
+### Example
 
 ```ts
 import BetterPropTypes from 'better-prop-types'
@@ -65,3 +75,4 @@ You can also use them with all the functional validators: `objectOf(/* */).isReq
 [lnk-github]: https://github.com/ivangabriele/better-prop-types/actions?query=branch%3Aalpha++
 [lnk-license]: https://github.com/ivangabriele/better-prop-types/blob/alpha/LICENSE
 [lnk-npm]: https://www.npmjs.com/package/better-prop-types/v/alpha
+[lnk-prop-types]: https://github.com/facebook/prop-types
