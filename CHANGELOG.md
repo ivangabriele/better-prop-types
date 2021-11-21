@@ -1,3 +1,15 @@
+# [1.0.0-alpha.6](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-11-21)
+
+
+### Features
+
+* attach new modifiers to any validator ([968c05a](https://github.com/ivangabriele/better-prop-types/commit/968c05a2b49e8857e94650d2cf177395253e5e70))
+* attach new modifiers to arrayOf & objectOf validators ([73fa84a](https://github.com/ivangabriele/better-prop-types/commit/73fa84ae752df3e95ee3367a7d13cc8fe467ee94))
+* attach new modifiers to exact & shape validators ([c4a8b65](https://github.com/ivangabriele/better-prop-types/commit/c4a8b654fd14917ec61ea8f86229a858f32b9228))
+* attach new modifiers to instanceOf validator ([6d97cc7](https://github.com/ivangabriele/better-prop-types/commit/6d97cc7661cd100314aef4cbde347b51cd947be3))
+* attach new modifiers to node validator ([ebf5253](https://github.com/ivangabriele/better-prop-types/commit/ebf5253da787c0e726ef00686ab84e292befcf8f))
+* attach new modifiers to oneOfType validator ([4a41a6d](https://github.com/ivangabriele/better-prop-types/commit/4a41a6d900203d7adef312ed874d025f107cf1c4))
+
 # [1.0.0-alpha.5](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-11-21)
 
 
