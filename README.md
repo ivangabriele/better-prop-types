@@ -58,8 +58,8 @@ MyComponent.propTypes = {
 
 You can also use them with all the functional validators:
 
-- `objectOf(/* */).isRequiredButNullable`
-- `shape(/* */).isOptionalButNotNull`
+- `BetterPropsTypes.objectOf(/* */).isRequiredButNullable`
+- `BetterPropsTypes.shape(/* */).isOptionalButNotNull`
 - etc
 
 ## Roadmap
