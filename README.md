@@ -27,13 +27,13 @@ And that's important to note that **better-prop-types** is only bundled as a ful
 ### Installation
 
 ```sh
-yarn add -E better-prop-types@alpha
+yarn add -E better-prop-types@beta
 ```
 
 or:
 
 ```sh
-npm i -E better-prop-types@alpha
+npm i -E better-prop-types@beta
 ```
 
 ### Example
@@ -71,12 +71,12 @@ You can also use them with all the functional validators:
 
 ---
 
-[img-codecov]: https://img.shields.io/codecov/c/github/ivangabriele/better-prop-types/alpha?style=flat-square
-[img-github]: https://img.shields.io/github/workflow/status/ivangabriele/better-prop-types/Check/alpha?style=flat-square
+[img-codecov]: https://img.shields.io/codecov/c/github/ivangabriele/better-prop-types/beta?style=flat-square
+[img-github]: https://img.shields.io/github/workflow/status/ivangabriele/better-prop-types/Check/beta?style=flat-square
 [img-license]: https://img.shields.io/github/license/ivangabriele/better-prop-types?style=flat-square
-[img-npm]: https://img.shields.io/npm/v/better-prop-types/alpha?style=flat-square
-[lnk-codecov]: https://codecov.io/gh/ivangabriele/better-prop-types/branch/alpha
-[lnk-github]: https://github.com/ivangabriele/better-prop-types/actions?query=branch%3Aalpha++
-[lnk-license]: https://github.com/ivangabriele/better-prop-types/blob/alpha/LICENSE
-[lnk-npm]: https://www.npmjs.com/package/better-prop-types/v/alpha
+[img-npm]: https://img.shields.io/npm/v/better-prop-types/beta?style=flat-square
+[lnk-codecov]: https://codecov.io/gh/ivangabriele/better-prop-types/branch/beta
+[lnk-github]: https://github.com/ivangabriele/better-prop-types/actions?query=branch%3Abeta++
+[lnk-license]: https://github.com/ivangabriele/better-prop-types/blob/beta/LICENSE
+[lnk-npm]: https://www.npmjs.com/package/better-prop-types/v/beta
 [lnk-prop-types]: https://github.com/facebook/prop-types
