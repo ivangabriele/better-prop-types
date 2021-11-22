@@ -5,10 +5,10 @@
 [![Code Coverage][img-codecov]][lnk-codecov]
 [![NPM Version][img-npm]][lnk-npm]
 
-**better-prop-types** is a wrapper for the original **[prop-types][lnk-prop-types]** library adding a few more validators and
-modifiers to accurately handle `null` and `undefined` values (which shouldn't be considered similar!).
+**better-prop-types** is a wrapper for the original **[prop-types][lnk-prop-types]** library adding a few more
+validators and modifiers to accurately handle `null` and `undefined` values (which shouldn't be considered similar!).
 
-The code is fully test-covered and actively used in production.
+The code is fully test-covered and actively used in production. It also provides accurate Typescript declarations.
 
 The library includes the original `prop-types` as a dependency.
 
@@ -68,6 +68,7 @@ You can also use them with all the functional validators:
   - `all(...validators)` => `BetterPropsTypes.all(...validators)`
   - `deprecated(validator, reason)` => `BetterPropsTypes.isDeprecated(validator, reason)`
   - `isRequiredForA11y(validator)` => `BetterPropsTypes.string.isRequiredForA11y`
+- Improve original error messages for arrays validated via functional validators with explicit property naming.
 
 ---
 
