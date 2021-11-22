@@ -1,7 +1,7 @@
 {
   "name": "better-prop-types",
   "description": "Better PropTypes.",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-beta.1",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
