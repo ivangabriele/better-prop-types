@@ -1,5 +1,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import PropTypes, {
+import PropTypes from 'prop-types'
+
+import createBetterChainableTypeChecker from './helpers/createChainableTypeChecker'
+
+import type { Isable } from './types'
+import type {
   InferProps,
   InferType,
   ReactComponentLike,
@@ -8,9 +13,6 @@ import PropTypes, {
   ValidationMap,
   Validator,
 } from 'prop-types'
-
-import createBetterChainableTypeChecker from './helpers/createChainableTypeChecker'
-import { Isable } from './types'
 
 // —————————————————————————————————————————————————————————————————————————————
 // Primitive validators

@@ -9,7 +9,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Requireable } from 'prop-types'
 
-import { Isable } from '../types'
+import type { Isable } from '../types'
 
 /**
  * @see https://github.com/facebook/prop-types/blob/main/factoryWithTypeCheckers.js
