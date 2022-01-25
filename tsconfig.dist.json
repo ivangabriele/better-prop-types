@@ -1,0 +1,10 @@
+{
+  "extends": ".",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+  },
+  "exclude": ["dist/*", "node_modules/*", "tests/*"]
+}

@@ -23,6 +23,8 @@ export default {
     // Convert CommonJS to ES6:
     commonjs(),
     // Transpile TS & TSX to JS:
-    typescript(),
+    typescript({
+      tsconfig: './tsconfig.dist.json',
+    }),
   ],
 }

@@ -4,7 +4,7 @@ declare const console: {
   error: jest.Mock
 }
 
-export default function expectPropToPass(declaration, value) {
+export default function expectPropToPass(declaration: any, value: any): void {
   if (!jest.isMockFunction(console.error)) {
     console.error = jest.fn()
   }

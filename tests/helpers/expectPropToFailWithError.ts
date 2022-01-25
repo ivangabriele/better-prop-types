@@ -4,7 +4,11 @@ declare const console: {
   error: jest.Mock
 }
 
-export default function expectPropToFailWithError<T>(declaration: Validator<T>, value: any, expectedMessage: string) {
+export default function expectPropToFailWithError<T>(
+  declaration: Validator<T>,
+  value: any,
+  expectedMessage: string,
+): void {
   // Reset the module registry - the cache of all required modules to isolate "prop-types" local state
   jest.resetModules()
 
