@@ -16,7 +16,7 @@ describe('.oneOfType()', () => {
     expectPropToFailWithError(
       BetterPropTypes.oneOfType(OF_TYPE),
       INVALID_VALUE,
-      'Invalid prop `testProp` supplied to `TestComponent`.',
+      'Invalid prop `testProp` supplied to `TestComponent`, expected one of type [string].',
     )
   })
 
@@ -37,7 +37,7 @@ describe('.oneOfType()', () => {
       expectPropToFailWithError(
         BetterPropTypes.oneOfType(OF_TYPE).isOptionalButNotNull,
         INVALID_VALUE,
-        'Invalid prop `testProp` supplied to `TestComponent`.',
+        'Invalid prop `testProp` supplied to `TestComponent`, expected one of type [string].',
       )
     })
 
@@ -63,7 +63,7 @@ describe('.oneOfType()', () => {
       expectPropToFailWithError(
         BetterPropTypes.oneOfType(OF_TYPE).isRequiredButNullable,
         INVALID_VALUE,
-        'Invalid prop `testProp` supplied to `TestComponent`.',
+        'Invalid prop `testProp` supplied to `TestComponent`, expected one of type [string].',
       )
     })
 
@@ -89,7 +89,7 @@ describe('.oneOfType()', () => {
       expectPropToFailWithError(
         BetterPropTypes.oneOfType(OF_TYPE).isRequired,
         INVALID_VALUE,
-        'Invalid prop `testProp` supplied to `TestComponent`.',
+        'Invalid prop `testProp` supplied to `TestComponent`, expected one of type [string].',
       )
     })
 
