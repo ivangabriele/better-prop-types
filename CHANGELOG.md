@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0...v1.1.0) (2022-01-25)
+
+
+### Features
+
+* use import type for typings ([83344bc](https://github.com/ivangabriele/better-prop-types/commit/83344bc871f366e1e7d3ff846df1bb4141a3659e))
+
 # 1.0.0 (2021-11-22)
 
 
