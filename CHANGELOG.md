@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ivangabriele/better-prop-types/compare/v1.1.0...v1.1.1) (2022-01-25)
+
+
+### Bug Fixes
+
+* replace chainable type binding with factory ([47bfd65](https://github.com/ivangabriele/better-prop-types/commit/47bfd65f0e8a1e64f30143d28605b73f89fb2a12))
+
 # [1.1.0](https://github.com/ivangabriele/better-prop-types/compare/v1.0.0...v1.1.0) (2022-01-25)
 
 
